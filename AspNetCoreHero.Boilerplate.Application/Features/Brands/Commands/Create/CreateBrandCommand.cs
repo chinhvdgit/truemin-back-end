@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreHero.Boilerplate.Application.Features.Brands.Commands.Create
 {
-    public partial class CreateBrandCommand : IRequest<Result<int>>
+    public partial class CreateCategoryCommand : IRequest<Result<int>>
     {
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Tax { get; set; }
     }
 
-    public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, Result<int>>
+    public class CreateBrandCommandHandler : IRequestHandler<CreateCategoryCommand, Result<int>>
     {
         private readonly IBrandRepository _brandRepository;
         private readonly IMapper _mapper;
@@ -29,7 +29,7 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Brands.Commands.Create
             _mapper = mapper;
         }
 
-        public async Task<Result<int>> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
+        public async Task<Result<int>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             var product = _mapper.Map<Brand>(request);
             await _brandRepository.InsertAsync(product);

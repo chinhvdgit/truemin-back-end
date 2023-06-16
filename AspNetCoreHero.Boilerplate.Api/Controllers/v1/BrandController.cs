@@ -27,14 +27,14 @@ namespace AspNetCoreHero.Boilerplate.Api.Controllers.v1
 
         // POST api/<controller>
         [HttpPost]
-        public async Task<IActionResult> Post(CreateBrandCommand command)
+        public async Task<IActionResult> Post(CreateCategoryCommand command)
         {
             return Ok(await _mediator.Send(command));
         }
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, UpdateBrandCommand command)
+        public async Task<IActionResult> Put(int id, UpdateCategoryCommand command)
         {
             if (id != command.Id)
             {
@@ -47,7 +47,7 @@ namespace AspNetCoreHero.Boilerplate.Api.Controllers.v1
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _mediator.Send(new DeleteBrandCommand { Id = id }));
+            return Ok(await _mediator.Send(new DeleteCategoryCommand { Id = id }));
         }
     }
 }

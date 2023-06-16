@@ -10,7 +10,7 @@ namespace AspNetCoreHero.Boilerplate.Application.Mappings
     {
         public BrandProfile()
         {
-            CreateMap<CreateBrandCommand, Brand>().ReverseMap();
+            CreateMap<CreateCategoryCommand, Brand>().ReverseMap();
             CreateMap<GetBrandByIdResponse, Brand>().ReverseMap();
             CreateMap<GetAllBrandsCachedResponse, Brand>().ReverseMap();
         }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreHero.Boilerplate.Application.Features.Brands.Commands.Delete
 {
-    public class DeleteBrandCommand : IRequest<Result<int>>
+    public class DeleteCategoryCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
 
-        public class DeleteBrandCommandHandler : IRequestHandler<DeleteBrandCommand, Result<int>>
+        public class DeleteBrandCommandHandler : IRequestHandler<DeleteCategoryCommand, Result<int>>
         {
             private readonly IBrandRepository _brandRepository;
             private readonly IUnitOfWork _unitOfWork;
@@ -21,7 +21,7 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Brands.Commands.Delete
                 _unitOfWork = unitOfWork;
             }
 
-            public async Task<Result<int>> Handle(DeleteBrandCommand command, CancellationToken cancellationToken)
+            public async Task<Result<int>> Handle(DeleteCategoryCommand command, CancellationToken cancellationToken)
             {
                 var product = await _brandRepository.GetByIdAsync(command.Id);
                 await _brandRepository.DeleteAsync(product);

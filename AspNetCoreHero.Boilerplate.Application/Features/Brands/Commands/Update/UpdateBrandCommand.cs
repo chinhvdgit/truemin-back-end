@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreHero.Boilerplate.Application.Features.Brands.Commands.Update
 {
-    public class UpdateBrandCommand : IRequest<Result<int>>
+    public class UpdateCategoryCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Tax { get; set; }
 
-        public class UpdateProductCommandHandler : IRequestHandler<UpdateBrandCommand, Result<int>>
+        public class UpdateProductCommandHandler : IRequestHandler<UpdateCategoryCommand, Result<int>>
         {
             private readonly IUnitOfWork _unitOfWork;
             private readonly IBrandRepository _brandRepository;
@@ -24,7 +24,7 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Brands.Commands.Update
                 _unitOfWork = unitOfWork;
             }
 
-            public async Task<Result<int>> Handle(UpdateBrandCommand command, CancellationToken cancellationToken)
+            public async Task<Result<int>> Handle(UpdateCategoryCommand command, CancellationToken cancellationToken)
             {
                 var brand = await _brandRepository.GetByIdAsync(command.Id);
 

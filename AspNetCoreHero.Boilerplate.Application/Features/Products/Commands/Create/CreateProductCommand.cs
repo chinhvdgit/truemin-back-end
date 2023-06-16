@@ -15,6 +15,9 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Crea
         public string Description { get; set; }
         public decimal Rate { get; set; }
         public int BrandId { get; set; }
+        public decimal SalePrice { get; set; }
+        public decimal RetailPrice { get; set; }
+        public string ProductImg { get; set; }
     }
 
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Result<int>>

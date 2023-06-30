@@ -8,12 +8,17 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.IO;
 
 namespace AspNetCoreHero.Boilerplate.Api
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -34,14 +39,51 @@ namespace AspNetCoreHero.Boilerplate.Api
 
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(
-                    builder =>
-                    {
-                        builder.WithOrigins("https://h5.zdn.vn/zapps/4512663114183583577", "http://localhost:3000")
-                                            .AllowAnyHeader()
-                                            .AllowAnyMethod();
-                    });
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
+
+                                      builder.WithOrigins(
+                                          "http://localhost:3000",
+                                          "http://localhost:2999",
+                                          "http://localhost:8081",
+                                          "http://localhost:8088",
+                                                          "http://localhost:8082",
+                                                          "http://localhost:3011",
+                                                          "http://172.16.4.163:8088",
+                                                          "http://192.168.1.28:8088",
+                                                          "http://asiasoftdn.ddns.net:8088"
+                                                          )
+                                              .AllowAnyMethod()
+                                                .AllowAnyHeader()
+                                                .AllowCredentials();
+                                      //builder
+                                      //      .AllowAnyOrigin()
+                                      //      .AllowAnyMethod()
+                                      //      .AllowAnyHeader()
+                                      //      .AllowCredentials();
+                                      //builder.WithOrigins("http://localhost:8080",
+                                      //    "http://localhost:8081",
+                                      //    "http://localhost:8088",
+                                      //                    "http://localhost:8082",
+                                      //                    "http://localhost:3011")
+                                      //        .AllowAnyMethod()
+                                      //          .AllowAnyHeader()
+                                      //          .AllowCredentials();
+                                  });
             });
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddDefaultPolicy(
+            //        builder =>
+            //        {
+            //            builder.WithOrigins("https://h5.zdn.vn/zapps/4512663114183583577", "http://localhost:3000")
+            //                                .AllowAnyHeader()
+            //                                .AllowAnyMethod();
+            //        });
+            //});
 
             //// Named Policy
             //services.AddCors(options =>
@@ -71,6 +113,15 @@ namespace AspNetCoreHero.Boilerplate.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseFileServer(new FileServerOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+                RequestPath = "/wwwroot",
+                EnableDefaultFiles = true
+            });
+
             app.ConfigureSwagger();
             app.UseHttpsRedirection();
             app.UseMiddleware<ErrorHandlerMiddleware>();
@@ -78,14 +129,16 @@ namespace AspNetCoreHero.Boilerplate.Api
 
             app.UseRouting();
 
-            // Shows UseCors with CorsPolicyBuilder.
-            app.UseCors(builder =>
-            {
-                builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader();
-            });
+            //// Shows UseCors with CorsPolicyBuilder.
+            //app.UseCors(builder =>
+            //{
+            //    builder
+            //    .AllowAnyOrigin()
+            //    .AllowAnyMethod()
+            //    .AllowAnyHeader();
+            //});
+
+            app.UseCors(MyAllowSpecificOrigins);
 
 
             app.UseAuthentication();

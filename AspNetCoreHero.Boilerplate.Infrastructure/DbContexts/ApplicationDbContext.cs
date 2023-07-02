@@ -24,6 +24,8 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.DbContexts
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<ProductSale> ProductSales { get; set; }
 
         public IDbConnection Connection => Database.GetDbConnection();
 
@@ -65,6 +67,23 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.DbContexts
                 property.SetColumnType("decimal(18,2)");
             }
             base.OnModelCreating(builder);
+
+            builder.Entity<ProductCategory>().HasKey(sc => new { sc.ProductId, sc.CategoryId });
+            builder.Entity<ProductCategory>()
+                .HasOne<Product>(sc => sc.Product)
+                .WithMany(s => s.ProductCategories)
+                .HasForeignKey(sc => sc.ProductId);
+
+            builder.Entity<ProductCategory>()
+                .HasOne<Category>(sc => sc.Category)
+                .WithMany(s => s.ProductCategories)
+                .HasForeignKey(sc => sc.CategoryId);
+
+            builder.Entity<Product>()
+                .HasOne<ProductSale>(sc => sc.Sale)
+                .WithOne(s => s.Product)
+                .HasForeignKey<ProductSale>(sc => sc.ProductId);
+
         }
     }
 }

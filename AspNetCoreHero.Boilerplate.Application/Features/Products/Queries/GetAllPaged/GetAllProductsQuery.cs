@@ -42,9 +42,10 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAl
                 Rate = e.Rate,
                 Barcode = e.Barcode,
                 SalePrice = e.SalePrice,
-                RetailPrice = e.RetailPrice,
-                ProductImg = e.ProductImg,
-                CategoryId = e.CategoryId,
+                Price = e.Price,
+                Image = e.Image,
+                CategoryId = e.ProductCategories.Select(x => x.CategoryId).ToList(),
+                Sale = e.Sale == null ? null : new ProductSaleResponse { Type = e.Sale.Type, Percent = e.Sale.Percent, Amount = e.Sale.Amount }
             };
             var paginatedList = await _repository.Products
                 .Select(expression)

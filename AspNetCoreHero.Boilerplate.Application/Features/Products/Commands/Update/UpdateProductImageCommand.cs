@@ -33,7 +33,7 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Upda
                 }
                 else
                 {
-                    product.Image = command.Image;
+                    product.ImageByte = command.Image;
                     await _productRepository.UpdateAsync(product);
                     await _unitOfWork.Commit(cancellationToken);
                     return Result<int>.Success(product.Id);

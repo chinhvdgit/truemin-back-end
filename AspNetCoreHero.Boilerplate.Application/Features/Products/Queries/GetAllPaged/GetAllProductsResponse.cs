@@ -1,4 +1,6 @@
-﻿namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged
+﻿using System.Collections.Generic;
+
+namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged
 {
     public class GetAllProductsResponse
     {
@@ -8,8 +10,9 @@
         public string Description { get; set; }
         public decimal Rate { get; set; }
         public decimal SalePrice { get; set; }
-        public decimal RetailPrice { get; set; }
-        public string ProductImg { get; set; }
-        public int CategoryId { get; set; }
+        public decimal Price { get; set; }
+        public string Image { get; set; }
+        public ProductSaleResponse Sale { get; set; }
+        public List<int> CategoryId { get; set; }
     }
 }

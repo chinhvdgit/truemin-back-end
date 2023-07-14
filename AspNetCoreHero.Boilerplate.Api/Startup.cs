@@ -42,9 +42,15 @@ namespace AspNetCoreHero.Boilerplate.Api
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
+                                      //builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
+                                      builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "h5.zdn.vn" || new Uri(origin).Host == "localhost");
 
                                       builder.WithOrigins(
+                                          "https://h5.zdn.vn/zapps/4512663114183583577",
+                                          "https://h5.zdn.vn/zapps/4512663114183583577/",
+                                          "https://h5.zadn.vn/zapps/4512663114183583577",
+                                          "https://h5.zadn.vn/zapps/4512663114183583577/",
+                                          "zbrowser://h5.zdn.vn/zapps/4512663114183583577",
                                           "http://localhost:3000",
                                           "http://localhost:2999",
                                           "http://localhost:8081",

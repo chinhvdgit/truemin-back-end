@@ -18,10 +18,38 @@ namespace AspNetCoreHero.Boilerplate.Api.Controllers.v1
             return Ok(products);
         }
 
+        [HttpGet]
+        [Route("getSales")]
+        public async Task<IActionResult> GetSales(int pageNumber, int pageSize)
+        {
+            var cmd = new GetAllProductsQuery(pageNumber, pageSize);
+            cmd.IsSale = true;
+            var products = await _mediator.Send(cmd);
+            return Ok(products);
+        }
+
+        [HttpGet]
+        [Route("getHighlights")]
+        public async Task<IActionResult> GetHighlights(int pageNumber, int pageSize)
+        {
+            var cmd = new GetAllProductsQuery(pageNumber, pageSize);
+            cmd.IsHighlight = true;
+            var products = await _mediator.Send(cmd);
+            return Ok(products);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var product = await _mediator.Send(new GetProductByIdQuery() { Id = id });
+            return Ok(product);
+        }
+
+        [HttpGet]
+        [Route("GetPromotionById")]
+        public async Task<IActionResult> GetPromotionById(int id)
+        {
+            var product = await _mediator.Send(new GetProductPromotionByIdQuery() { Id = id });
             return Ok(product);
         }
 

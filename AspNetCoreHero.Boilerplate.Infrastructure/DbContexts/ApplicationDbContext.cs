@@ -26,6 +26,8 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.DbContexts
         public DbSet<Category> Categories { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductSale> ProductSales { get; set; }
+        public DbSet<ProductPromotion> ProductPromotions { get; set; }
+        public DbSet<ProductPromotionFree> ProductPromotionFrees { get; set; }
 
         public IDbConnection Connection => Database.GetDbConnection();
 
@@ -84,6 +86,15 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.DbContexts
                 .WithOne(s => s.Product)
                 .HasForeignKey<ProductSale>(sc => sc.ProductId);
 
+            builder.Entity<Product>()
+               .HasOne<ProductPromotionFree>(sc => sc.ProductPromotionFree)
+               .WithOne(s => s.Product)
+               .HasForeignKey<ProductPromotionFree>(sc => sc.ProductId);
+
+            builder.Entity<ProductPromotion>()
+                .HasOne<Product>(sc => sc.Product)
+                .WithMany(s => s.Promotions)
+                .HasForeignKey(sc => sc.ProductId);
         }
     }
 }

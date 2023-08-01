@@ -16,10 +16,13 @@ namespace AspNetCoreHero.Boilerplate.Domain.Entities.Catalog
         public decimal SalePrice { get; set; }
         public decimal Price { get; set; }
         public string Image { get; set; }
+        public bool? IsHighlight { get; set; }
         public virtual Brand Brand { get; set; }
         public virtual Category Category { get; set; }
         public IList<ProductCategory> ProductCategories { get; set; }
         public virtual ProductSale Sale { get; set; }
+        public virtual IList<ProductPromotion> Promotions { get; set; }
+        public virtual ProductPromotionFree ProductPromotionFree { get; set; }
 
     }
 }

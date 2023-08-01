@@ -15,6 +15,8 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAl
     {
         public int PageNumber { get; set; }
         public int PageSize { get; set; }
+        public bool? IsHighlight { get; set; }
+        public bool? IsSale { get; set; }
 
         public GetAllProductsQuery(int pageNumber, int pageSize)
         {
@@ -45,9 +47,13 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAl
                 Price = e.Price,
                 Image = e.Image,
                 CategoryId = e.ProductCategories.Select(x => x.CategoryId).ToList(),
-                Sale = e.Sale == null ? null : new ProductSaleResponse { Type = e.Sale.Type, Percent = e.Sale.Percent, Amount = e.Sale.Amount }
+                Sale = e.Sale == null ? null : new ProductSaleResponse { Type = e.Sale.Type, Percent = e.Sale.Percent, Amount = e.Sale.Amount },
+                IsSale = e.Promotions == null || e.Promotions.Count == 0 ? false : true,
+                IsHighlight = e.IsHighlight
             };
             var paginatedList = await _repository.Products
+                .Where(x => (request.IsHighlight == null || x.IsHighlight == request.IsHighlight)
+                            && (request.IsSale == null || (request.IsSale.Value && x.Promotions.Count > 0)))
                 .Select(expression)
                 .ToPaginatedListAsync(request.PageNumber, request.PageSize);
             return paginatedList;

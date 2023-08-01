@@ -12,6 +12,8 @@ namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAl
         public decimal SalePrice { get; set; }
         public decimal Price { get; set; }
         public string Image { get; set; }
+        public bool? IsSale { get; set; }
+        public bool? IsHighlight { get; set; }
         public ProductSaleResponse Sale { get; set; }
         public List<int> CategoryId { get; set; }
     }

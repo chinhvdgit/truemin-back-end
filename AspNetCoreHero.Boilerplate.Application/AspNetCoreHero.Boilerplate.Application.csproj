@@ -21,4 +21,10 @@
   <ItemGroup>
     <ProjectReference Include="..\AspNetCoreHero.Boilerplate.Domain\AspNetCoreHero.Boilerplate.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\Orders\Commands\Delete\" />
+    <Folder Include="Features\Orders\Commands\Update\" />
+    <Folder Include="Features\Orders\Queries\GetAllPaged\" />
+    <Folder Include="Features\Orders\Queries\GetById\" />
+  </ItemGroup>
 </Project>

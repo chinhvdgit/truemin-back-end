@@ -1,6 +1,8 @@
 ﻿using AspNetCoreHero.Boilerplate.Application.Exceptions;
 using AspNetCoreHero.Results;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -23,6 +25,10 @@ namespace AspNetCoreHero.Boilerplate.Api.Middlewares
             try
             {
                 await _next(context);
+
+                var loggerFactory = context.RequestServices.GetRequiredService<ILoggerFactory>();
+                var logger = loggerFactory.CreateLogger("app");
+                logger.LogInformation("ErrorHandlerMiddleware REQUEST: " + context.Request.Headers["origin"]);
             }
             catch (Exception error)
             {

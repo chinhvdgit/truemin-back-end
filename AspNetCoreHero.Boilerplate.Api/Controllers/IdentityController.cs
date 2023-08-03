@@ -67,5 +67,12 @@ namespace AspNetCoreHero.Boilerplate.Api.Controllers
             else
                 return HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
         }
+
+        [HttpGet("test")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Test()
+        {
+            return Ok();
+        }
     }
 }

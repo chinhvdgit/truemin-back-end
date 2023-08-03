@@ -1,0 +1,1712 @@
+2023-08-03 11:20:18.567 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 11:20:19.528 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 11:20:20.485 +07:00 [INF] Executed DbCommand (70ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:20:20.586 +07:00 [WRN] Role 26ddd032-3509-489c-b24b-19796cf31a09 validation failed: DuplicateRoleName.
+2023-08-03 11:20:20.595 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:20:20.596 +07:00 [WRN] Role e2c1e892-d4cb-4277-b73e-2a214144ce61 validation failed: DuplicateRoleName.
+2023-08-03 11:20:20.598 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:20:20.598 +07:00 [WRN] Role e74b3a86-2384-4a79-a6b4-cbda7d135c9e validation failed: DuplicateRoleName.
+2023-08-03 11:20:20.600 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:20:20.603 +07:00 [WRN] Role b327a27e-4955-419a-b3d9-0b2fd42e335f validation failed: DuplicateRoleName.
+2023-08-03 11:20:20.627 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 11:20:20.643 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 11:20:20.702 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:20:20.779 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 11:20:20.784 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 11:20:20.786 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 11:20:20.788 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 11:20:20.789 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 11:20:20.790 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 11:20:20.790 +07:00 [INF] Application Starting
+2023-08-03 11:20:21.263 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 11:20:21.264 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 11:20:21.269 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 11:20:21.269 +07:00 [INF] Hosting environment: Development
+2023-08-03 11:20:21.269 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 11:21:25.167 +07:00 [INF] Application is shutting down...
+2023-08-03 11:58:46.910 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 11:58:47.870 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 11:58:48.862 +07:00 [INF] Executed DbCommand (50ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:58:48.944 +07:00 [WRN] Role 68664da4-21dd-4acf-8a5e-20f3cf47c575 validation failed: DuplicateRoleName.
+2023-08-03 11:58:48.951 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:58:48.952 +07:00 [WRN] Role a4fc75ff-cb9b-4396-ac3e-e7f685b3f4e6 validation failed: DuplicateRoleName.
+2023-08-03 11:58:48.954 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:58:48.954 +07:00 [WRN] Role 8cc33d53-2580-4a40-a2c5-b50b6ac0c246 validation failed: DuplicateRoleName.
+2023-08-03 11:58:48.956 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:58:48.956 +07:00 [WRN] Role cd431d8c-3a39-4f66-8858-da4a6d3e47d8 validation failed: DuplicateRoleName.
+2023-08-03 11:58:48.977 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 11:58:48.991 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 11:58:49.042 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 11:58:49.100 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 11:58:49.106 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 11:58:49.108 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 11:58:49.111 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 11:58:49.113 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 11:58:49.113 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 11:58:49.113 +07:00 [INF] Application Starting
+2023-08-03 11:58:49.688 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 11:58:49.688 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 11:58:49.694 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 11:58:49.694 +07:00 [INF] Hosting environment: Development
+2023-08-03 11:58:49.694 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 12:01:28.707 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:01:29.750 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 12:01:30.927 +07:00 [INF] Executed DbCommand (105ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:31.060 +07:00 [WRN] Role 5e07987e-cfae-428b-b37c-70a03ce8f5c8 validation failed: DuplicateRoleName.
+2023-08-03 12:01:31.070 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:31.071 +07:00 [WRN] Role 046d8cca-b216-4216-8c96-cacbe3889ac2 validation failed: DuplicateRoleName.
+2023-08-03 12:01:31.073 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:31.078 +07:00 [WRN] Role 56f4f6a4-361f-4dc2-b0a9-9a1bdbbf9b84 validation failed: DuplicateRoleName.
+2023-08-03 12:01:31.079 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:31.080 +07:00 [WRN] Role 268f1f55-cc72-411a-93ce-878395075ab1 validation failed: DuplicateRoleName.
+2023-08-03 12:01:31.106 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 12:01:31.125 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 12:01:31.207 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:31.291 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:31.298 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:31.300 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:31.303 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 12:01:31.305 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 12:01:31.305 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 12:01:31.305 +07:00 [INF] Application Starting
+2023-08-03 12:01:31.886 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 12:01:31.886 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 12:01:31.886 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:01:31.886 +07:00 [INF] Hosting environment: Development
+2023-08-03 12:01:31.886 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 12:01:49.079 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - -
+2023-08-03 12:01:49.079 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - -
+2023-08-03 12:01:49.079 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - -
+2023-08-03 12:01:51.595 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:51.595 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:51.595 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:51.597 +07:00 [INF] test
+2023-08-03 12:01:51.597 +07:00 [INF] test
+2023-08-03 12:01:51.597 +07:00 [INF] test
+2023-08-03 12:01:51.616 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - - - 204 - - 2540.9072ms
+2023-08-03 12:01:51.617 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - - - 204 - - 2540.8817ms
+2023-08-03 12:01:51.616 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - - - 204 - - 2540.9154ms
+2023-08-03 12:01:51.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 12:01:51.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 12:01:51.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 12:01:51.650 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:51.650 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:51.662 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:51.894 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 12:01:51.894 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 12:01:51.894 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 12:01:51.959 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 12:01:51.959 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 12:01:51.959 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 12:01:51.961 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:51.961 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:51.961 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 12:01:51.990 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 12:01:51.990 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 12:01:51.999 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 12:01:52.000 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-08-03 12:01:52.000 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-08-03 12:01:52.000 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2023-08-03 12:01:52.000 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2023-08-03 12:01:52.005 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2023-08-03 12:01:52.005 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2023-08-03 12:01:52.010 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 12:01:52.016 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 20.054ms
+2023-08-03 12:01:52.017 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 12:01:52.017 +07:00 [INF] test
+2023-08-03 12:01:52.021 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 385.6672ms
+2023-08-03 12:01:52.105 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-08-03 12:01:52.105 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-08-03 12:01:52.105 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 105.6946ms
+2023-08-03 12:01:52.105 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 113.7594ms
+2023-08-03 12:01:52.105 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:52.105 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:52.105 +07:00 [INF] test
+2023-08-03 12:01:52.105 +07:00 [INF] test
+2023-08-03 12:01:52.105 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 401 - application/json 469.3679ms
+2023-08-03 12:01:52.105 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 401 - application/json 469.4608ms
+2023-08-03 12:01:52.120 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/token - -
+2023-08-03 12:01:52.120 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/token - -
+2023-08-03 12:01:52.120 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:52.120 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:52.121 +07:00 [INF] test
+2023-08-03 12:01:52.121 +07:00 [INF] test
+2023-08-03 12:01:52.121 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/token - - - 204 - - 1.0965ms
+2023-08-03 12:01:52.121 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/token - - - 204 - - 0.8580ms
+2023-08-03 12:01:52.124 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5003/api/identity/token application/json 58
+2023-08-03 12:01:52.124 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5003/api/identity/token application/json 58
+2023-08-03 12:01:52.125 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:52.125 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:52.125 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 12:01:52.125 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 12:01:52.126 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 12:01:52.125 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 12:01:52.126 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 12:01:52.126 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 12:01:52.129 +07:00 [INF] Route matched with {action = "GetToken", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTokenAsync(AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenRequest) on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 12:01:52.129 +07:00 [INF] Route matched with {action = "GetToken", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTokenAsync(AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenRequest) on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 12:01:52.203 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 12:01:52.203 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 12:01:52.208 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 12:01:52.227 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 12:01:52.237 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2023-08-03 12:01:52.237 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2023-08-03 12:01:52.294 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 12:01:52.294 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 12:01:52.327 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 12:01:52.327 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 12:01:52.332 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.332 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.335 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.335 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.337 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.337 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.340 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.340 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.342 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.342 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.345 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.345 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.348 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.348 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:01:52.354 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.355 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:01:52.373 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-08-03 12:01:52.373 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-08-03 12:01:52.379 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 12:01:52.379 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 12:01:52.382 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 12:01:52.382 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 12:01:52.414 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 12:01:52.414 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 12:01:52.425 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 12:01:52.425 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 12:01:52.456 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api) in 327.4303ms
+2023-08-03 12:01:52.456 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api) in 327.2732ms
+2023-08-03 12:01:52.457 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 12:01:52.457 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 12:01:52.458 +07:00 [INF] test
+2023-08-03 12:01:52.458 +07:00 [INF] test
+2023-08-03 12:01:52.460 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5003/api/identity/token application/json 58 - 200 - application/json;+charset=utf-8 335.6443ms
+2023-08-03 12:01:52.460 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5003/api/identity/token application/json 58 - 200 - application/json;+charset=utf-8 335.4544ms
+2023-08-03 12:01:52.467 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 12:01:52.467 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:52.470 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 12:01:52.470 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:01:52.483 +07:00 [INF] Successfully validated the token.
+2023-08-03 12:01:52.483 +07:00 [INF] Successfully validated the token.
+2023-08-03 12:01:52.484 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:52.484 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:52.487 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 12:01:52.487 +07:00 [INF] Authorization was successful.
+2023-08-03 12:01:52.487 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 12:01:52.488 +07:00 [INF] Authorization was successful.
+2023-08-03 12:01:52.758 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 12:01:52.794 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 12:01:52.818 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 12:01:52.819 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 12:01:52.874 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 12:01:52.882 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedBy], [c].[CreatedOn], [c].[Description], [c].[Icon], [c].[LastModifiedBy], [c].[LastModifiedOn], [c].[Name], [c].[Tax]
+FROM [Categories] AS [c]
+2023-08-03 12:01:52.912 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2023-08-03 12:01:52.955 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 12:01:52.962 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 12:01:52.964 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 476.8129ms
+2023-08-03 12:01:52.964 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:52.964 +07:00 [INF] test
+2023-08-03 12:01:52.965 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 495.0093ms
+2023-08-03 12:01:53.029 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 12:01:53.058 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 570.4804ms
+2023-08-03 12:01:53.058 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 12:01:53.058 +07:00 [INF] test
+2023-08-03 12:01:53.058 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 591.6602ms
+2023-08-03 12:02:47.221 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:02:48.229 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 12:02:49.282 +07:00 [INF] Executed DbCommand (80ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:02:49.407 +07:00 [WRN] Role b90b453f-1c30-4add-adca-898823ebb709 validation failed: DuplicateRoleName.
+2023-08-03 12:02:49.418 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:02:49.418 +07:00 [WRN] Role 9235171f-90a1-460b-93f9-7be4b9900f3e validation failed: DuplicateRoleName.
+2023-08-03 12:02:49.420 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:02:49.420 +07:00 [WRN] Role cc6858bc-9d5a-434b-bb24-6b68b0ac1d7f validation failed: DuplicateRoleName.
+2023-08-03 12:02:49.424 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:02:49.429 +07:00 [WRN] Role e8b19dd4-98f3-4b96-8833-133284e7a928 validation failed: DuplicateRoleName.
+2023-08-03 12:02:49.455 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 12:02:49.466 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 12:02:49.549 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 12:02:49.640 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:02:49.653 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:02:49.654 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 12:02:49.657 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 12:02:49.658 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 12:02:49.659 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 12:02:49.659 +07:00 [INF] Application Starting
+2023-08-03 12:02:50.693 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 12:02:50.693 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 12:02:50.694 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:02:50.694 +07:00 [INF] Hosting environment: Development
+2023-08-03 12:02:50.694 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 12:02:51.307 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - -
+2023-08-03 12:02:51.307 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - -
+2023-08-03 12:02:51.307 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - -
+2023-08-03 12:02:51.433 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:02:51.436 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 12:02:51.436 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:02:51.437 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 12:02:51.437 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:02:51.437 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 12:02:51.491 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - - - 204 - - 187.6349ms
+2023-08-03 12:02:51.491 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - - - 204 - - 187.6239ms
+2023-08-03 12:02:51.493 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - - - 204 - - 187.6105ms
+2023-08-03 12:02:51.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 12:02:51.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 12:02:51.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 12:02:51.540 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:02:51.540 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:02:51.543 +07:00 [INF] CORS policy execution successful.
+2023-08-03 12:02:51.873 +07:00 [INF] Successfully validated the token.
+2023-08-03 12:02:51.873 +07:00 [INF] Successfully validated the token.
+2023-08-03 12:02:51.873 +07:00 [INF] Successfully validated the token.
+2023-08-03 12:02:51.877 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 12:02:51.877 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 12:02:51.877 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 12:02:51.919 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 12:02:51.919 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 12:02:51.926 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 12:02:51.927 +07:00 [INF] Authorization was successful.
+2023-08-03 12:02:51.928 +07:00 [INF] Authorization was successful.
+2023-08-03 12:02:51.936 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 12:02:51.943 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 17.4178ms
+2023-08-03 12:02:51.944 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 12:02:51.944 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 12:02:51.951 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 438.0891ms
+2023-08-03 12:02:52.137 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 12:02:52.174 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 12:02:52.206 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 12:02:52.207 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 12:02:52.264 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 12:02:52.274 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedBy], [c].[CreatedOn], [c].[Description], [c].[Icon], [c].[LastModifiedBy], [c].[LastModifiedOn], [c].[Name], [c].[Tax]
+FROM [Categories] AS [c]
+2023-08-03 12:02:52.316 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2023-08-03 12:02:52.359 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 12:02:52.432 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 12:02:52.432 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 12:02:52.450 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 530.7306ms
+2023-08-03 12:02:52.451 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 12:02:52.453 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 12:02:52.455 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 941.9127ms
+2023-08-03 12:02:52.475 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 548.6034ms
+2023-08-03 12:02:52.475 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 12:02:52.476 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 12:02:52.476 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 962.7824ms
+2023-08-03 13:04:33.727 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 13:04:34.942 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 13:04:36.147 +07:00 [INF] Executed DbCommand (82ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:36.266 +07:00 [WRN] Role 88d8368f-0de2-44da-85f3-2681c95365e6 validation failed: DuplicateRoleName.
+2023-08-03 13:04:36.276 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:36.277 +07:00 [WRN] Role ab1c1020-db0d-4b5c-bc52-b5567b154992 validation failed: DuplicateRoleName.
+2023-08-03 13:04:36.278 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:36.279 +07:00 [WRN] Role bc50c5df-2a65-4b3f-a9dc-cf207bda8b6f validation failed: DuplicateRoleName.
+2023-08-03 13:04:36.281 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:36.281 +07:00 [WRN] Role d0731fc2-63c7-405a-b138-99bc665d4fa3 validation failed: DuplicateRoleName.
+2023-08-03 13:04:36.314 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:04:36.324 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:04:36.387 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:36.458 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:36.465 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:36.466 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:36.469 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:04:36.471 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:04:36.471 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 13:04:36.471 +07:00 [INF] Application Starting
+2023-08-03 13:04:37.046 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 13:04:37.046 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 13:04:37.046 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:04:37.046 +07:00 [INF] Hosting environment: Development
+2023-08-03 13:04:37.046 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 13:04:37.297 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:04:37.297 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - -
+2023-08-03 13:04:37.297 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:04:37.398 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.398 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.398 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.399 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.400 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.400 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.400 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.400 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.400 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.417 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - - - 204 - - 121.9674ms
+2023-08-03 13:04:37.417 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - - - 204 - - 121.9642ms
+2023-08-03 13:04:37.417 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - - - 204 - - 122.0164ms
+2023-08-03 13:04:37.431 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 13:04:37.431 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:04:37.432 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:04:37.454 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.454 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.457 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.692 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 13:04:37.692 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 13:04:37.692 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 13:04:37.740 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 13:04:37.740 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 13:04:37.740 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 13:04:37.742 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:37.742 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:04:37.742 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:37.773 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 13:04:37.773 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:04:37.781 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 13:04:37.782 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-08-03 13:04:37.782 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-08-03 13:04:37.782 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2023-08-03 13:04:37.782 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2023-08-03 13:04:37.786 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2023-08-03 13:04:37.786 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2023-08-03 13:04:37.793 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 13:04:37.799 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 20.0029ms
+2023-08-03 13:04:37.799 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:04:37.799 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.799 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.804 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 372.5834ms
+2023-08-03 13:04:37.891 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-08-03 13:04:37.891 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-08-03 13:04:37.891 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 109.9866ms
+2023-08-03 13:04:37.891 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 117.2804ms
+2023-08-03 13:04:37.891 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:37.891 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:37.891 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.891 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.891 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.891 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.892 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 401 - application/json 460.2168ms
+2023-08-03 13:04:37.892 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 401 - application/json 460.1976ms
+2023-08-03 13:04:37.909 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/token - -
+2023-08-03 13:04:37.909 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/token - -
+2023-08-03 13:04:37.909 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.909 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.909 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.909 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:37.909 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.909 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:37.910 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/token - - - 204 - - 0.9306ms
+2023-08-03 13:04:37.910 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/token - - - 204 - - 0.4768ms
+2023-08-03 13:04:37.913 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5003/api/identity/token application/json 58
+2023-08-03 13:04:37.913 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5003/api/identity/token application/json 58
+2023-08-03 13:04:37.913 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.913 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:37.915 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 13:04:37.915 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-03 13:04:37.915 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 13:04:37.915 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-08-03 13:04:37.915 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 13:04:37.915 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 13:04:37.920 +07:00 [INF] Route matched with {action = "GetToken", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTokenAsync(AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenRequest) on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:04:37.920 +07:00 [INF] Route matched with {action = "GetToken", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTokenAsync(AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenRequest) on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:04:38.008 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 13:04:38.008 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 13:04:38.011 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:04:38.022 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:04:38.032 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2023-08-03 13:04:38.043 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2023-08-03 13:04:38.097 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 13:04:38.107 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 13:04:38.138 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 13:04:38.151 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 13:04:38.156 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.167 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.169 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.170 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.172 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.180 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.180 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.187 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.189 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.189 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.191 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.193 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.194 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.197 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.198 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:04:38.200 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:04:38.215 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-08-03 13:04:38.215 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-08-03 13:04:38.221 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 13:04:38.221 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2023-08-03 13:04:38.224 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 13:04:38.224 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 13:04:38.254 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 13:04:38.254 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2023-08-03 13:04:38.263 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:04:38.263 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[AspNetCoreHero.Boilerplate.Application.DTOs.Identity.TokenResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:04:38.299 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api) in 379.3183ms
+2023-08-03 13:04:38.299 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api) in 379.1824ms
+2023-08-03 13:04:38.300 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 13:04:38.300 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.GetTokenAsync (TrueMin.Api)'
+2023-08-03 13:04:38.301 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:38.301 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:38.302 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:38.302 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:38.303 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5003/api/identity/token application/json 58 - 200 - application/json;+charset=utf-8 390.8373ms
+2023-08-03 13:04:38.303 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5003/api/identity/token application/json 58 - 200 - application/json;+charset=utf-8 390.8056ms
+2023-08-03 13:04:38.311 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:04:38.311 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:38.314 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:04:38.315 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:38.337 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:04:38.337 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:04:38.338 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:38.338 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:38.338 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 13:04:38.339 +07:00 [INF] Authorization was successful.
+2023-08-03 13:04:38.341 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 13:04:38.341 +07:00 [INF] Authorization was successful.
+2023-08-03 13:04:38.582 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:04:38.628 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 13:04:38.659 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:04:38.659 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:04:38.727 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:04:38.733 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedBy], [c].[CreatedOn], [c].[Description], [c].[Icon], [c].[LastModifiedBy], [c].[LastModifiedOn], [c].[Name], [c].[Tax]
+FROM [Categories] AS [c]
+2023-08-03 13:04:38.751 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2023-08-03 13:04:38.783 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 13:04:38.819 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 13:04:38.825 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 486.558ms
+2023-08-03 13:04:38.825 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:38.825 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:38.825 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:38.826 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 515.1808ms
+2023-08-03 13:04:38.849 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:04:38.881 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 540.0832ms
+2023-08-03 13:04:38.881 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:38.881 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:38.881 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:38.881 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 567.0195ms
+2023-08-03 13:04:41.615 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 13:04:41.615 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:04:41.615 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:04:41.615 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:41.615 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:41.615 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:04:41.616 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:04:41.616 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:04:41.616 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:04:41.616 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:41.616 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:41.616 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:04:41.616 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 13:04:41.616 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 13:04:41.616 +07:00 [INF] Authorization was successful.
+2023-08-03 13:04:41.616 +07:00 [INF] Authorization was successful.
+2023-08-03 13:04:41.618 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:04:41.619 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:04:41.621 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 13:04:41.631 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 13:04:41.632 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 15.7907ms
+2023-08-03 13:04:41.632 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:41.632 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:41.632 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:41.633 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 18.9322ms
+2023-08-03 13:04:41.646 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 13:04:41.646 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 26.5285ms
+2023-08-03 13:04:41.646 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:04:41.646 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:41.646 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:41.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 31.6190ms
+2023-08-03 13:04:41.653 +07:00 [INF] Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 13:04:41.688 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:04:41.694 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 78.1306ms
+2023-08-03 13:04:41.694 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:04:41.695 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:04:41.695 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:04:41.695 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 80.1365ms
+2023-08-03 13:07:48.423 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 13:07:49.314 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 13:07:50.269 +07:00 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:07:50.378 +07:00 [WRN] Role 4cc2e71d-41f4-4210-8ed7-f5a9fbdcd796 validation failed: DuplicateRoleName.
+2023-08-03 13:07:50.387 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:07:50.387 +07:00 [WRN] Role ffdb31f6-492f-4daf-af73-96bc4d33695b validation failed: DuplicateRoleName.
+2023-08-03 13:07:50.389 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:07:50.389 +07:00 [WRN] Role d18c6297-f7f1-4c11-b1bf-b28bd9b96f7d validation failed: DuplicateRoleName.
+2023-08-03 13:07:50.390 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:07:50.391 +07:00 [WRN] Role 8c9a8138-cc16-4270-9f94-0dd69c2fea9c validation failed: DuplicateRoleName.
+2023-08-03 13:07:50.412 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:07:50.426 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:07:50.494 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:07:50.557 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:07:50.565 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:07:50.567 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:07:50.569 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:07:50.570 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:07:50.571 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 13:07:50.571 +07:00 [INF] Application Starting
+2023-08-03 13:07:51.108 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 13:07:51.112 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 13:07:51.116 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:07:51.116 +07:00 [INF] Hosting environment: Development
+2023-08-03 13:07:51.116 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 13:07:55.702 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - -
+2023-08-03 13:07:55.702 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:07:55.702 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:07:55.821 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:07:55.821 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:07:55.821 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:07:55.823 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:07:55.823 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:07:55.823 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:07:55.824 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:07:55.824 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:07:55.824 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:07:55.856 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - - - 204 - - 148.5941ms
+2023-08-03 13:07:55.856 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - - - 204 - - 148.5758ms
+2023-08-03 13:07:55.856 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - - - 204 - - 148.6191ms
+2023-08-03 13:07:55.885 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:07:55.885 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:07:55.886 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 13:07:55.926 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:07:55.926 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:07:55.929 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:07:56.185 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:07:56.185 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:07:56.185 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:07:56.188 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:07:56.188 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:07:56.188 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:07:56.220 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:07:56.220 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 13:07:56.227 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 13:07:56.228 +07:00 [INF] Authorization was successful.
+2023-08-03 13:07:56.228 +07:00 [INF] Authorization was successful.
+2023-08-03 13:07:56.241 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 13:07:56.248 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 21.9956ms
+2023-08-03 13:07:56.248 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:07:56.248 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:07:56.248 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:07:56.254 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 368.1645ms
+2023-08-03 13:07:56.453 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:07:56.493 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 13:07:56.524 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:07:56.524 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:07:56.567 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:07:56.574 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedBy], [c].[CreatedOn], [c].[Description], [c].[Icon], [c].[LastModifiedBy], [c].[LastModifiedOn], [c].[Name], [c].[Tax]
+FROM [Categories] AS [c]
+2023-08-03 13:07:56.639 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2023-08-03 13:07:56.672 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 13:07:56.711 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 13:07:56.734 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:07:56.738 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 517.1816ms
+2023-08-03 13:07:56.738 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:07:56.739 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:07:56.740 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:07:56.741 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 856.0882ms
+2023-08-03 13:07:56.772 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 544.6068ms
+2023-08-03 13:07:56.772 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:07:56.772 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:07:56.772 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:07:56.772 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 887.5216ms
+2023-08-03 13:09:35.887 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 13:09:36.754 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 13:09:37.692 +07:00 [INF] Executed DbCommand (67ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:09:37.809 +07:00 [WRN] Role 6095b579-cf1d-4f3b-bc47-707d334395a2 validation failed: DuplicateRoleName.
+2023-08-03 13:09:37.820 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:09:37.821 +07:00 [WRN] Role 21334766-78fd-4d14-aac5-d7da42533a3a validation failed: DuplicateRoleName.
+2023-08-03 13:09:37.823 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:09:37.823 +07:00 [WRN] Role d113ce15-2c83-4fcb-b2ec-bcc9f7b126e3 validation failed: DuplicateRoleName.
+2023-08-03 13:09:37.825 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:09:37.825 +07:00 [WRN] Role 2c1d44d7-d86f-4ba2-9efd-5014dd25498b validation failed: DuplicateRoleName.
+2023-08-03 13:09:37.857 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:09:37.871 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:09:37.948 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:09:38.015 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:09:38.020 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:09:38.022 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:09:38.025 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:09:38.026 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:09:38.027 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 13:09:38.027 +07:00 [INF] Application Starting
+2023-08-03 13:09:38.489 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 13:09:38.489 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 13:09:38.490 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:09:38.490 +07:00 [INF] Hosting environment: Development
+2023-08-03 13:09:38.490 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 13:09:54.727 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:09:54.727 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:09:54.727 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - -
+2023-08-03 13:09:54.849 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:09:54.849 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:09:54.849 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:09:54.851 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:09:54.851 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:09:54.851 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:09:54.851 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:09:54.851 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:09:54.851 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:09:54.871 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - - - 204 - - 146.3838ms
+2023-08-03 13:09:54.871 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - - - 204 - - 146.4637ms
+2023-08-03 13:09:54.871 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - - - 204 - - 146.4040ms
+2023-08-03 13:09:54.903 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 13:09:54.903 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:09:54.903 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:09:54.933 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:09:54.933 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:09:54.945 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:09:55.222 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:09:55.222 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:09:55.222 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:09:55.225 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:09:55.225 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:09:55.225 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:09:55.255 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:09:55.255 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 13:09:55.262 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 13:09:55.263 +07:00 [INF] Authorization was successful.
+2023-08-03 13:09:55.263 +07:00 [INF] Authorization was successful.
+2023-08-03 13:09:55.272 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 13:09:55.277 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 17.1296ms
+2023-08-03 13:09:55.278 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:09:55.278 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:09:55.278 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:09:55.282 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 378.9629ms
+2023-08-03 13:09:55.469 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:09:55.510 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 13:09:55.535 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:09:55.536 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:09:55.568 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:09:55.576 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedBy], [c].[CreatedOn], [c].[Description], [c].[Icon], [c].[LastModifiedBy], [c].[LastModifiedOn], [c].[Name], [c].[Tax]
+FROM [Categories] AS [c]
+2023-08-03 13:09:55.640 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2023-08-03 13:09:55.669 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 13:09:55.701 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 13:09:55.730 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 474.5427ms
+2023-08-03 13:09:55.731 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:09:55.732 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:09:55.732 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:09:55.733 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:09:55.734 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 830.9290ms
+2023-08-03 13:09:55.769 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 506.8344ms
+2023-08-03 13:09:55.769 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:09:55.769 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:09:55.769 +07:00 [INF] ErrorHandlerMiddleware REQUEST: http://localhost:2999
+2023-08-03 13:09:55.770 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 866.3170ms
+2023-08-03 13:10:24.057 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 13:10:24.884 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 13:10:25.812 +07:00 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:10:25.913 +07:00 [WRN] Role e5772c0a-408d-46f9-8fb0-65163864d4f5 validation failed: DuplicateRoleName.
+2023-08-03 13:10:25.923 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:10:25.924 +07:00 [WRN] Role e333c2f5-b2a7-4a8e-9eb0-d0639878e27d validation failed: DuplicateRoleName.
+2023-08-03 13:10:25.926 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:10:25.932 +07:00 [WRN] Role 5550b46c-abf1-47f7-89cd-49e80b6e0711 validation failed: DuplicateRoleName.
+2023-08-03 13:10:25.934 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:10:25.934 +07:00 [WRN] Role 56b2d2d1-2a5d-4894-82bc-0910c15867bb validation failed: DuplicateRoleName.
+2023-08-03 13:10:25.961 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:10:25.970 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:10:26.045 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 13:10:26.113 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:10:26.121 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:10:26.123 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 13:10:26.126 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 13:10:26.128 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 13:10:26.128 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 13:10:26.128 +07:00 [INF] Application Starting
+2023-08-03 13:10:26.705 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 13:10:26.705 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 13:10:26.705 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:10:26.705 +07:00 [INF] Hosting environment: Development
+2023-08-03 13:10:26.705 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 13:10:30.130 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - -
+2023-08-03 13:10:30.130 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:10:30.130 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:10:30.240 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:10:30.240 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:10:30.240 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:10:30.242 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:10:30.242 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:10:30.242 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:10:30.267 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Category? - - - 204 - - 133.8138ms
+2023-08-03 13:10:30.267 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/identity/test? - - - 204 - - 133.8139ms
+2023-08-03 13:10:30.267 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5003/api/v1/Product? - - - 204 - - 133.8373ms
+2023-08-03 13:10:30.315 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/identity/test? - -
+2023-08-03 13:10:30.315 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Product? - -
+2023-08-03 13:10:30.315 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/v1/Category? - -
+2023-08-03 13:10:30.359 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:10:30.359 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:10:30.370 +07:00 [INF] CORS policy execution successful.
+2023-08-03 13:10:30.629 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:10:30.629 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:10:30.630 +07:00 [INF] Successfully validated the token.
+2023-08-03 13:10:30.633 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:10:30.633 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:10:30.633 +07:00 [INF] Executing endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:10:30.667 +07:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController (TrueMin.Api).
+2023-08-03 13:10:30.667 +07:00 [INF] Route matched with {action = "Test", controller = "Identity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Test() on controller AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController (TrueMin.Api).
+2023-08-03 13:10:30.675 +07:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController (TrueMin.Api).
+2023-08-03 13:10:30.676 +07:00 [INF] Authorization was successful.
+2023-08-03 13:10:30.676 +07:00 [INF] Authorization was successful.
+2023-08-03 13:10:30.686 +07:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-08-03 13:10:30.693 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api) in 19.3552ms
+2023-08-03 13:10:30.693 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.IdentityController.Test (TrueMin.Api)'
+2023-08-03 13:10:30.693 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:10:30.700 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/identity/test? - - - 200 0 - 384.5860ms
+2023-08-03 13:10:30.916 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:10:30.956 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT_BIG(*)
+FROM [Products] AS [p]
+2023-08-03 13:10:30.982 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:10:30.983 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-08-03 13:10:31.013 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=AspNetCoreHero.Boilerplate.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-08-03 13:10:31.022 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedBy], [c].[CreatedOn], [c].[Description], [c].[Icon], [c].[LastModifiedBy], [c].[LastModifiedOn], [c].[Name], [c].[Tax]
+FROM [Categories] AS [c]
+2023-08-03 13:10:31.087 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2023-08-03 13:10:31.127 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Description], [t].[Rate], [t].[Barcode], [t].[SalePrice], [t].[Price], [t].[Image], CASE
+    WHEN [p1].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [p1].[Type], [p1].[Percent], [p1].[Amount], CASE
+    WHEN ((
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) = 0) AND (
+        SELECT COUNT(*)
+        FROM [ProductPromotions] AS [p]
+        WHERE [t].[Id] = [p].[ProductId]) IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [t].[IsHighlight], [p1].[Id], [p2].[CategoryId], [p2].[ProductId], [p3].[Id], [p3].[Name], [p3].[Percent], [p3].[Price], [p3].[ProductId], [p3].[Quantity], [p3].[Type]
+FROM (
+    SELECT [p0].[Id], [p0].[Barcode], [p0].[Description], [p0].[Image], [p0].[IsHighlight], [p0].[Name], [p0].[Price], [p0].[Rate], [p0].[SalePrice]
+    FROM [Products] AS [p0]
+    ORDER BY (SELECT 1)
+    OFFSET 0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [ProductSales] AS [p1] ON [t].[Id] = [p1].[ProductId]
+LEFT JOIN [ProductCategories] AS [p2] ON [t].[Id] = [p2].[ProductId]
+LEFT JOIN [ProductPromotions] AS [p3] ON [t].[Id] = [p3].[ProductId]
+ORDER BY [t].[Id], [p1].[Id], [p2].[ProductId], [p2].[CategoryId], [p3].[Id]
+2023-08-03 13:10:31.175 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.Result`1[[System.Collections.Generic.List`1[[AspNetCoreHero.Boilerplate.Application.Features.Categories.Queries.GetAllCached.GetAllCategoriesCachedResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-03 13:10:31.195 +07:00 [INF] Executing OkObjectResult, writing value of type 'AspNetCoreHero.Results.PaginatedResult`1[[AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged.GetAllProductsResponse, AspNetCoreHero.Boilerplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:10:31.199 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api) in 531.1268ms
+2023-08-03 13:10:31.200 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.CategoryController.GetAll (TrueMin.Api)'
+2023-08-03 13:10:31.201 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:10:31.203 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Category? - - - 200 - application/json;+charset=utf-8 887.7544ms
+2023-08-03 13:10:31.242 +07:00 [INF] Executed action AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api) in 566.1771ms
+2023-08-03 13:10:31.242 +07:00 [INF] Executed endpoint 'AspNetCoreHero.Boilerplate.Api.Controllers.v1.ProductController.GetAll (TrueMin.Api)'
+2023-08-03 13:10:31.242 +07:00 [INF] REQUEST: http://localhost:2999
+2023-08-03 13:10:31.242 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/v1/Product? - - - 200 - application/json;+charset=utf-8 927.0517ms
+2023-08-03 17:12:27.024 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 17:12:28.054 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 17:12:29.303 +07:00 [INF] Executed DbCommand (67ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:12:29.407 +07:00 [WRN] Role 3c25e42e-395a-45ea-be27-94b1e76cbf7e validation failed: DuplicateRoleName.
+2023-08-03 17:12:29.420 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:12:29.421 +07:00 [WRN] Role 67a7f348-01f1-4e59-ad2f-ff71693df77f validation failed: DuplicateRoleName.
+2023-08-03 17:12:29.423 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:12:29.423 +07:00 [WRN] Role 91ecd5ad-86bf-4ce7-a22c-efe2008b24ad validation failed: DuplicateRoleName.
+2023-08-03 17:12:29.426 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:12:29.426 +07:00 [WRN] Role d711b2f4-187a-417f-9a86-da041850aa1c validation failed: DuplicateRoleName.
+2023-08-03 17:12:29.457 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 17:12:29.476 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 17:12:29.541 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:12:29.608 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 17:12:29.615 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 17:12:29.617 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 17:12:29.621 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 17:12:29.623 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 17:12:29.623 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 17:12:29.623 +07:00 [INF] Application Starting
+2023-08-03 17:12:34.243 +07:00 [FTL] Application startup exception
+System.IO.DirectoryNotFoundException: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api\.well-known\
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root)
+   at AspNetCoreHero.Boilerplate.Api.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory) in H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api\Startup.cs:line 144
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2023-08-03 17:13:05.214 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 17:13:06.163 +07:00 [INF] Entity Framework Core 5.0.1 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-08-03 17:13:07.021 +07:00 [INF] Executed DbCommand (55ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:13:07.099 +07:00 [WRN] Role 71d47c53-4d26-4f86-af5b-00402cd7f3b3 validation failed: DuplicateRoleName.
+2023-08-03 17:13:07.107 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:13:07.108 +07:00 [WRN] Role a13b06d2-0a1b-4464-8ea8-8f49a2a226d9 validation failed: DuplicateRoleName.
+2023-08-03 17:13:07.110 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:13:07.111 +07:00 [WRN] Role fc2ef525-eb0b-424c-a22e-03fa522fa8f8 validation failed: DuplicateRoleName.
+2023-08-03 17:13:07.113 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:13:07.114 +07:00 [WRN] Role 71fac02d-b074-4af3-b4b2-320577f83e29 validation failed: DuplicateRoleName.
+2023-08-03 17:13:07.136 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 17:13:07.147 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 17:13:07.201 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2023-08-03 17:13:07.252 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 17:13:07.258 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 17:13:07.260 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2023-08-03 17:13:07.262 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__defaultUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[Users] AS [u]
+        WHERE [u].[Id] = @__defaultUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-08-03 17:13:07.264 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Identity].[Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2023-08-03 17:13:07.265 +07:00 [INF] Finished Seeding Default Data
+2023-08-03 17:13:07.265 +07:00 [INF] Application Starting
+2023-08-03 17:13:07.757 +07:00 [INF] Now listening on: https://localhost:5003
+2023-08-03 17:13:07.757 +07:00 [INF] Now listening on: http://localhost:5002
+2023-08-03 17:13:07.758 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 17:13:07.758 +07:00 [INF] Hosting environment: Development
+2023-08-03 17:13:07.758 +07:00 [INF] Content root path: H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api
+2023-08-03 17:13:24.679 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/.well-known/pki-validation/ - -
+2023-08-03 17:13:24.834 +07:00 [INF] REQUEST: 
+2023-08-03 17:13:24.840 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/.well-known/pki-validation/ - - - 404 0 - 162.4518ms
+2023-08-03 17:14:09.389 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/.well-known/pki-validation/61AA17BC4164C13D260FD93264C51847.txt - -
+2023-08-03 17:14:09.425 +07:00 [INF] Sending file. Request path: '/pki-validation/61AA17BC4164C13D260FD93264C51847.txt'. Physical path: 'H:\PROJECTS\zalo-mini-app\truemin-app-git\truemin-back-end\AspNetCoreHero.Boilerplate.Api\.well-known\pki-validation\61AA17BC4164C13D260FD93264C51847.txt'
+2023-08-03 17:14:09.425 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/.well-known/pki-validation/61AA17BC4164C13D260FD93264C51847.txt - - - 200 93 text/plain 36.5707ms
+2023-08-03 17:14:09.676 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/favicon.ico - -
+2023-08-03 17:14:09.677 +07:00 [INF] REQUEST: 
+2023-08-03 17:14:09.677 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/favicon.ico - - - 404 0 - 1.2093ms
